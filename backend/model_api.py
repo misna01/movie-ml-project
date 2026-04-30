@@ -9,8 +9,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-data = pd.read_csv("data.csv")
-
+data = pd.read_csv("backend/data.csv")
 le_genre = LabelEncoder()
 le_mood = LabelEncoder()
 le_time = LabelEncoder()
