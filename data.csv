@@ -1,0 +1,30 @@
+genre,mood,time,recommendation
+action,excited,1hr,short action movie
+action,excited,2hr,fast action movie
+action,excited,3hr,thriller action movie
+action,happy,1hr,fun action movie
+action,happy,2hr,hero action movie
+action,happy,3hr,adventure action movie
+action,sad,1hr,emotional action
+action,sad,2hr,drama action movie
+action,sad,3hr,serious action drama
+
+comedy,excited,1hr,standup comedy
+comedy,excited,2hr,fun comedy show
+comedy,excited,3hr,comedy marathon
+comedy,happy,1hr,quick comedy
+comedy,happy,2hr,fun comedy movie
+comedy,happy,3hr,family comedy
+comedy,sad,1hr,light comedy
+comedy,sad,2hr,feel good comedy
+comedy,sad,3hr,emotional comedy
+
+romance,excited,1hr,short love story
+romance,excited,2hr,romantic fun movie
+romance,excited,3hr,romantic drama
+romance,happy,1hr,cute love story
+romance,happy,2hr,love movie
+romance,happy,3hr,romantic movie
+romance,sad,1hr,sad love story
+romance,sad,2hr,emotional movie
+romance,sad,3hr,tragic romance
