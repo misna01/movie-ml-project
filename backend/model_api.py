@@ -5,11 +5,13 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import DecisionTreeClassifier
 import os
 
-
 app = Flask(__name__)
 CORS(app)
 
+# Load dataset
 data = pd.read_csv("backend/data.csv")
+
+# Encode data
 le_genre = LabelEncoder()
 le_mood = LabelEncoder()
 le_time = LabelEncoder()
@@ -20,12 +22,19 @@ data['mood'] = le_mood.fit_transform(data['mood'])
 data['time'] = le_time.fit_transform(data['time'])
 data['recommendation'] = le_output.fit_transform(data['recommendation'])
 
+# Train model
 X = data[['genre', 'mood', 'time']]
 y = data['recommendation']
 
 model = DecisionTreeClassifier()
 model.fit(X, y)
 
+# ✅ HOME ROUTE (IMPORTANT FIX)
+@app.route("/")
+def home():
+    return "Movie Recommendation API is running 🚀"
+
+# ✅ PREDICT ROUTE
 @app.route("/predict", methods=["POST"])
 def predict():
     input_data = request.json
@@ -42,8 +51,7 @@ def predict():
         "recommendation": le_output.inverse_transform(result)[0]
     })
 
-
-
+# Run app
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
