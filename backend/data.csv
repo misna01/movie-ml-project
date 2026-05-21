@@ -1,30 +1,53 @@
-genre,mood,time,recommendation
-action,excited,1hr,short action movie
-action,excited,2hr,fast action movie
-action,excited,3hr,thriller action movie
-action,happy,1hr,fun action movie
-action,happy,2hr,hero action movie
-action,happy,3hr,adventure action movie
-action,sad,1hr,emotional action
-action,sad,2hr,drama action movie
-action,sad,3hr,serious action drama
-
-comedy,excited,1hr,standup comedy
-comedy,excited,2hr,fun comedy show
-comedy,excited,3hr,comedy marathon
-comedy,happy,1hr,quick comedy
-comedy,happy,2hr,fun comedy movie
-comedy,happy,3hr,family comedy
-comedy,sad,1hr,light comedy
-comedy,sad,2hr,feel good comedy
-comedy,sad,3hr,emotional comedy
-
-romance,excited,1hr,short love story
-romance,excited,2hr,romantic fun movie
-romance,excited,3hr,romantic drama
-romance,happy,1hr,cute love story
-romance,happy,2hr,love movie
-romance,happy,3hr,romantic movie
-romance,sad,1hr,sad love story
-romance,sad,2hr,emotional movie
-romance,sad,3hr,tragic romance
+genre,mood,time,language,recommendation
+action,excited,2hr,english,Mad Max Fury Road
+action,excited,1hr,english,John Wick
+action,excited,3hr,english,Avengers Endgame
+action,happy,1hr,english,Die Hard
+action,happy,2hr,english,Top Gun Maverick
+action,happy,3hr,english,Mission Impossible
+action,sad,1hr,english,Logan
+action,sad,2hr,english,The Dark Knight
+action,sad,3hr,english,Interstellar
+comedy,happy,1hr,english,The Mask
+comedy,happy,2hr,english,Superbad
+comedy,happy,3hr,english,The Grand Budapest Hotel
+comedy,sad,1hr,english,Mr Bean Movie
+comedy,sad,2hr,english,Paddington 2
+comedy,sad,3hr,english,The Secret Life of Walter Mitty
+comedy,excited,1hr,english,Game Night
+comedy,excited,2hr,english,Jumanji Welcome to the Jungle
+comedy,excited,3hr,english,The Nice Guys
+romance,happy,1hr,english,Crazy Rich Asians
+romance,happy,2hr,english,Titanic
+romance,happy,3hr,english,La La Land
+romance,sad,1hr,english,Blue Valentine
+romance,sad,2hr,english,The Notebook
+romance,sad,3hr,english,Atonement
+romance,excited,1hr,english,About Time
+romance,excited,2hr,english,La La Land
+romance,excited,3hr,english,The Fault in Our Stars
+action,excited,2hr,hindi,Pathaan
+action,excited,3hr,hindi,Jawan
+action,happy,2hr,hindi,War
+action,sad,2hr,hindi,Sholay
+comedy,happy,2hr,hindi,3 Idiots
+comedy,happy,3hr,hindi,Hera Pheri
+comedy,sad,2hr,hindi,Munna Bhai MBBS
+comedy,excited,2hr,hindi,Andhadhun
+romance,happy,2hr,hindi,Dilwale Dulhania Le Jayenge
+romance,happy,3hr,hindi,Kuch Kuch Hota Hai
+romance,sad,2hr,hindi,Kal Ho Naa Ho
+romance,sad,3hr,hindi,Devdas
+romance,excited,2hr,hindi,Jab We Met
+action,excited,1hr,malayalam,Thallumaala
+action,excited,2hr,malayalam,Minnal Murali
+action,excited,3hr,malayalam,Lucifer
+action,happy,2hr,malayalam,Aavesham
+action,sad,2hr,malayalam,Bheeshma Parvam
+comedy,excited,2hr,malayalam,Jaya Jaya Jaya Jaya Hey
+comedy,happy,1hr,malayalam,Premalu
+comedy,happy,2hr,malayalam,Om Shanti Oshana
+comedy,sad,2hr,malayalam,Android Kunjappan Version 5.25
+romance,excited,2hr,malayalam,Bangalore Days
+romance,happy,2hr,malayalam,Hridayam
+romance,sad,2hr,malayalam,Premam

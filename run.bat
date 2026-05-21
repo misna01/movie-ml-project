@@ -1,0 +1,9 @@
+@echo off
+echo Starting Cinema Match...
+
+echo Starting Backend API...
+start cmd /k ".\venv\Scripts\python.exe backend\model_api.py"
+
+echo Starting Frontend Dev Server...
+cd frontend
+start cmd /k "npm run dev"
