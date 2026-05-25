@@ -55,7 +55,14 @@ function App() {
       }
     } catch (err) {
       console.error(err);
-      setError("Error connecting to backend. Make sure the local server is running.");
+      const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+      if (isLocal) {
+        setError("Error connecting to backend. Make sure your local Flask server is running on port 10000.");
+      } else {
+        setError(
+          "Error connecting to backend. Note: Render's free tier backend service spins down after inactivity and can take 50+ seconds to boot up on the first request. If this persists, make sure the VITE_API_BASE_URL environment variable is configured in Render."
+        );
+      }
     } finally {
       setLoading(false);
     }
@@ -73,6 +80,10 @@ function App() {
     hidden: { opacity: 1, y: 20 },
     show: { opacity: 1, y: 0 }
   };
+
+  const isLocalhost = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+  const isApiLocal = API_BASE_URL.includes("localhost") || API_BASE_URL.includes("127.0.0.1");
+  const isMisconfiguredProduction = !isLocalhost && isApiLocal;
 
   return (
     <div className="min-h-screen font-sans text-white bg-[#00040a] overflow-hidden relative selection:bg-blue-600 selection:text-white">
@@ -100,6 +111,23 @@ function App() {
             Discover the perfect movie for your current vibe. Choose your preferences and let our engine decide your fate.
           </p>
         </motion.div>
+
+        {isMisconfiguredProduction && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl mx-auto bg-amber-950/85 border border-amber-500/40 text-amber-200 p-5 rounded-2xl flex flex-col md:flex-row items-center gap-4 mb-10 backdrop-blur-2xl shadow-xl shadow-amber-950/40"
+          >
+            <AlertCircle className="w-10 h-10 text-amber-400 shrink-0" />
+            <div className="text-sm text-center md:text-left">
+              <h4 className="font-bold text-base text-amber-100 mb-1">⚠️ Warning: Deployed site is pointing to a local backend</h4>
+              <p>
+                Your frontend is deployed, but it is trying to connect to a local server (<code className="bg-amber-900/50 px-1.5 py-0.5 rounded text-amber-300 font-mono">http://127.0.0.1:10000</code>). 
+                To make this app work for others, please deploy your Python backend on Render and configure the <code className="bg-amber-900/50 px-1.5 py-0.5 rounded text-amber-300 font-mono">VITE_API_BASE_URL</code> environment variable in your Render dashboard.
+              </p>
+            </div>
+          </motion.div>
+        )}
 
         <motion.div 
           initial={{ opacity: 1, scale: 0.95 }}
