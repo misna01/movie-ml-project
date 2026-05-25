@@ -3,6 +3,8 @@ import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { Film, Clock, Smile, Languages, Search, AlertCircle, PlayCircle } from "lucide-react";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:10000";
+
 const backdropTiles = [
   { title: "Mad Max", tone: "from-red-700 to-zinc-950" },
   { title: "John Wick", tone: "from-zinc-700 to-black" },
@@ -19,7 +21,7 @@ const backdropTiles = [
 ];
 
 const posterFallback = (title) =>
-  `http://127.0.0.1:10000/poster/${encodeURIComponent(title)}.jpg`;
+  `${API_BASE_URL}/poster/${encodeURIComponent(title)}.jpg`;
 
 function App() {
   const [genre, setGenre] = useState("action");
@@ -39,7 +41,7 @@ function App() {
     setHasSearched(true);
 
     try {
-      const res = await axios.post("http://127.0.0.1:10000/predict", {
+      const res = await axios.post(`${API_BASE_URL}/predict`, {
         genre,
         mood,
         time,
@@ -68,7 +70,7 @@ function App() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 1, y: 20 },
     show: { opacity: 1, y: 0 }
   };
 
@@ -100,7 +102,7 @@ function App() {
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 1, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1 }}
           className="bg-black/65 backdrop-blur-2xl border border-white/15 p-6 md:p-8 rounded-2xl shadow-2xl shadow-black/70 max-w-4xl mx-auto mb-16"

@@ -150,9 +150,9 @@ def make_poster_svg(movie_title):
     return svg
 
 
-def poster_for(movie_title):
+def poster_for(movie_title, base_url):
     encoded_title = urllib.parse.quote(movie_title, safe="")
-    return f"http://127.0.0.1:10000/poster/{encoded_title}.jpg"
+    return urllib.parse.urljoin(base_url, f"poster/{encoded_title}.jpg")
 
 
 def fetch_url(url):
@@ -293,7 +293,7 @@ def predict():
         for mv in movies_list:
             movies_data.append({
                 "title": mv,
-                "poster": poster_for(mv)
+                "poster": poster_for(mv, request.host_url)
             })
 
         return jsonify({
