@@ -17,7 +17,11 @@ const backdropTiles = [
   { title: "Jawan", tone: "from-stone-700 to-red-950" },
   { title: "Minnal Murali", tone: "from-red-800 to-black" },
   { title: "Premalu", tone: "from-fuchsia-900 to-zinc-950" },
-  { title: "Bangalore Days", tone: "from-orange-800 to-black" }
+  { title: "Bangalore Days", tone: "from-orange-800 to-black" },
+  { title: "Inception", tone: "from-blue-900 to-black" },
+  { title: "Drishyam", tone: "from-emerald-900 to-zinc-950" },
+  { title: "Dangal", tone: "from-yellow-900 to-black" },
+  { title: "Kumbalangi Nights", tone: "from-cyan-900 to-zinc-950" }
 ];
 
 const posterFallback = (title) =>
@@ -159,6 +163,8 @@ function App() {
                   <option value="action">Action</option>
                   <option value="comedy">Comedy</option>
                   <option value="romance">Romance</option>
+                  <option value="thriller">Thriller</option>
+                  <option value="drama">Drama</option>
                 </select>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-400">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/></svg>

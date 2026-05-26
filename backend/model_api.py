@@ -7,6 +7,7 @@ import urllib.request
 import urllib.error
 import html
 import json
+import re
 
 app = Flask(__name__)
 CORS(app)
@@ -74,9 +75,111 @@ POSTER_PAGES = {
     "Bangalore Days": "Bangalore Days",
     "Hridayam": "Hridayam (film)",
     "Premam": "Premam",
+    "The Mummy": "The Mummy (1999 film)",
+    "Guardians of the Galaxy": "Guardians of the Galaxy (film)",
+    "Gladiator": "Gladiator (2000 film)",
+    "The Proposal": "The Proposal (2009 film)",
+    "Run": "Run (2020 American film)",
+    "A Quiet Place": "A Quiet Place",
+    "Inception": "Inception",
+    "Knives Out": "Knives Out",
+    "Source Code": "Source Code",
+    "Now You See Me": "Now You See Me (film)",
+    "Joker": "Joker (2019 film)",
+    "Shutter Island": "Shutter Island (film)",
+    "Se7en": "Seven (1995 film)",
+    "Whiplash": "Whiplash (2014 film)",
+    "The Social Network": "The Social Network",
+    "Oppenheimer": "Oppenheimer (film)",
+    "Little Miss Sunshine": "Little Miss Sunshine",
+    "The Pursuit of Happyness": "The Pursuit of Happyness",
+    "Forrest Gump": "Forrest Gump",
+    "Manchester by the Sea": "Manchester by the Sea (film)",
+    "The Green Mile": "The Green Mile (film)",
+    "Schindlers List": "Schindler's List",
+    "Dhoom": "Dhoom",
+    "Dabangg": "Dabangg",
+    "Bang Bang": "Bang Bang! (2014 film)",
+    "Ghajini": "Ghajini (2008 film)",
+    "Lakshya": "Lakshya (film)",
+    "Delhi Belly": "Delhi Belly (film)",
+    "Stree": "Stree (2018 film)",
+    "Andaaz Apna Apna": "Andaz Apna Apna",
+    "PK": "PK (film)",
+    "Chhichhore": "Chhichhore",
+    "Band Baaja Baaraat": "Band Baaja Baaraat",
+    "Yeh Jawaani Hai Deewani": "Yeh Jawaani Hai Deewani",
+    "Hum Tum": "Hum Tum",
+    "Rocky Aur Rani Kii Prem Kahaani": "Rocky Aur Rani Kii Prem Kahaani",
+    "Masaan": "Masaan",
+    "Kahaani": "Kahaani",
+    "Talaash": "Talaash: The Answer Lies Within",
+    "Talvar": "Talvar (film)",
+    "Badla": "Badla (2019 film)",
+    "Special 26": "Special 26",
+    "A Wednesday": "A Wednesday!",
+    "Ugly": "Ugly (film)",
+    "Haider": "Haider (film)",
+    "Raman Raghav 2.0": "Raman Raghav 2.0",
+    "Taare Zameen Par": "Taare Zameen Par",
+    "Dangal": "Dangal (film)",
+    "Swades": "Swades",
+    "Queen": "Queen (2013 film)",
+    "English Vinglish": "English Vinglish",
+    "Zindagi Na Milegi Dobara": "Zindagi Na Milegi Dobara",
+    "Black": "Black (2005 film)",
+    "Neerja": "Neerja",
+    "My Name Is Khan": "My Name Is Khan",
+    "RDX": "RDX: Robert Dony Xavier",
+    "Turbo": "Turbo (2024 film)",
+    "Kammatti Paadam": "Kammatipaadam",
+    "Malik": "Malik (film)",
+    "Jan E Man": "Jan. E. Man",
+    "Romancham": "Romancham",
+    "Kunjiramayanam": "Kunjiramayanam",
+    "Maheshinte Prathikaaram": "Maheshinte Prathikaaram",
+    "Sudani from Nigeria": "Sudani from Nigeria",
+    "Thattathin Marayathu": "Thattathin Marayathu",
+    "Anuraga Karikkin Vellam": "Anuraga Karikkin Vellam",
+    "June": "June (2019 film)",
+    "Jacobinte Swargarajyam": "Jacobinte Swargarajyam",
+    "Annayum Rasoolum": "Annayum Rasoolum",
+    "Ennu Ninte Moideen": "Ennu Ninte Moideen",
+    "Memories": "Memories (2013 film)",
+    "Drishyam": "Drishyam",
+    "Forensic": "Forensic (2020 film)",
+    "Mumbai Police": "Mumbai Police (film)",
+    "Traffic": "Traffic (2011 film)",
+    "Anjaam Pathiraa": "Anjaam Pathiraa",
+    "Operation Java": "Operation Java",
+    "Nayattu": "Nayattu (2021 film)",
+    "Iratta": "Iratta",
+    "Ela Veezha Poonchira": "Ela Veezha Poonchira",
+    "Charlie": "Charlie (2015 Malayalam film)",
+    "Ustad Hotel": "Ustad Hotel",
+    "Kumbalangi Nights": "Kumbalangi Nights",
+    "Home": "Home (2021 film)",
+    "North 24 Kaatham": "North 24 Kaatham",
+    "1983": "1983 (film)",
+    "Kaazhcha": "Kaazhcha",
+    "Thanmathra": "Thanmathra",
+    "Peranbu": "Peranbu",
 }
 
 POSTER_CACHE = {}
+POSTER_IMAGE_URLS = {
+    "Kumbalangi Nights": "https://upload.wikimedia.org/wikipedia/en/9/98/Kumbalangi_Nights_poster.jpg",
+    "Talaash": "https://upload.wikimedia.org/wikipedia/en/f/f3/Talaash_poster.jpg",
+    "Memories": "https://upload.wikimedia.org/wikipedia/en/1/18/Memories_%282013_film%29.jpg",
+    "Forensic": "https://upload.wikimedia.org/wikipedia/en/4/4c/Forensic_film_poster.jpg",
+    "Nayattu": "https://upload.wikimedia.org/wikipedia/en/7/78/Nayattu.jpg",
+    "Iratta": "https://upload.wikimedia.org/wikipedia/en/0/0a/Iratta.jpg",
+    "Traffic": "https://upload.wikimedia.org/wikipedia/en/5/5a/Traffic_%28Malayalam_film%29.jpg",
+    "Ela Veezha Poonchira": "https://upload.wikimedia.org/wikipedia/en/8/80/Ela_Veezha_Poonchira_film_poster.jpeg",
+    "Drishyam": "https://upload.wikimedia.org/wikipedia/en/9/9e/DrishyamMovie.jpg",
+    "Anjaam Pathiraa": "https://upload.wikimedia.org/wikipedia/en/2/22/Anjaam_Pathiraa.jpg",
+    "Operation Java": "https://upload.wikimedia.org/wikipedia/en/a/ab/Operation_java_poster.jpg",
+}
 REQUEST_HEADERS = {
     "User-Agent": "CinemaMatchLocal/1.0 (movie recommendation student project)"
 }
@@ -151,6 +254,9 @@ def make_poster_svg(movie_title):
 
 
 def poster_for(movie_title, base_url):
+    if movie_title in POSTER_IMAGE_URLS:
+        return POSTER_IMAGE_URLS[movie_title]
+
     encoded_title = urllib.parse.quote(movie_title, safe="")
     return urllib.parse.urljoin(base_url, f"poster/{encoded_title}.jpg")
 
@@ -162,7 +268,102 @@ def fetch_url(url):
         return response.read(), content_type
 
 
+def wikipedia_api(params):
+    query = urllib.parse.urlencode({**params, "format": "json", "formatversion": "2"})
+    response_bytes, _ = fetch_url(f"https://en.wikipedia.org/w/api.php?{query}")
+    return json.loads(response_bytes.decode("utf-8"))
+
+
+def clean_wikipedia_file_name(raw_value):
+    value = html.unescape(raw_value).strip()
+    value = re.sub(r"<!--.*?-->", "", value, flags=re.DOTALL).strip()
+    value = re.sub(r"<.*?>", "", value).strip()
+
+    file_match = re.search(r"\[\[\s*(?:File|Image)\s*:\s*([^|\]]+)", value, flags=re.IGNORECASE)
+    if file_match:
+        value = file_match.group(1)
+    else:
+        value = value.split("|", 1)[0].strip()
+
+    value = value.strip("[]{} \t\r\n")
+    if not value or value.lower() in {"no image.svg", "no poster available.svg"}:
+        return None
+
+    if value.lower().startswith(("file:", "image:")):
+        value = value.split(":", 1)[1].strip()
+
+    return value.replace(" ", "_")
+
+
+def wikipedia_file_url(file_name):
+    file_data = wikipedia_api({
+        "action": "query",
+        "prop": "imageinfo",
+        "iiprop": "url",
+        "titles": f"File:{file_name}",
+    })
+
+    pages = file_data.get("query", {}).get("pages", [])
+    if not pages:
+        return None
+
+    image_info = pages[0].get("imageinfo") or []
+    if not image_info:
+        return None
+
+    return image_info[0].get("url")
+
+
+def wikipedia_infobox_poster_url(movie_title):
+    page_title = POSTER_PAGES.get(movie_title, movie_title)
+    page_data = wikipedia_api({
+        "action": "query",
+        "prop": "revisions",
+        "rvprop": "content",
+        "rvslots": "main",
+        "titles": page_title,
+    })
+
+    pages = page_data.get("query", {}).get("pages", [])
+    if not pages:
+        return None
+
+    revisions = pages[0].get("revisions") or []
+    if not revisions:
+        return None
+
+    content = revisions[0].get("slots", {}).get("main", {}).get("content", "")
+    if not content:
+        return None
+
+    for field_name in ("poster", "image"):
+        match = re.search(
+            rf"^\|\s*{field_name}\s*=\s*(.+)$",
+            content,
+            flags=re.IGNORECASE | re.MULTILINE
+        )
+        if not match:
+            continue
+
+        file_name = clean_wikipedia_file_name(match.group(1))
+        if not file_name:
+            continue
+
+        image_url = wikipedia_file_url(file_name)
+        if image_url:
+            return image_url
+
+    return None
+
+
 def wikipedia_poster_url(movie_title):
+    if movie_title in POSTER_IMAGE_URLS:
+        return POSTER_IMAGE_URLS[movie_title]
+
+    image_url = wikipedia_infobox_poster_url(movie_title)
+    if image_url:
+        return image_url
+
     page_title = POSTER_PAGES.get(movie_title, movie_title)
     page_slug = urllib.parse.quote(page_title.replace(" ", "_"), safe="")
     summary_url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{page_slug}"
