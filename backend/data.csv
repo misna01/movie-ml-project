@@ -1,277 +1,591 @@
-
 genre,mood,time,language,recommendation
 
 action,excited,1hr,english,John Wick
 action,excited,1hr,english,Nobody
 action,excited,1hr,english,Extraction
 action,excited,1hr,english,Bullet Train
+action,excited,1hr,english,Atomic Blonde
+action,excited,1hr,english,The Transporter
+action,excited,1hr,english,Safe
+action,excited,1hr,english,Crank
+action,excited,1hr,english,Shooter
+action,excited,1hr,english,Wrath of Man
+action,excited,1hr,english,Parker
+action,excited,1hr,english,Mechanic Resurrection
+action,excited,1hr,english,The Expendables
+action,excited,1hr,english,Hardcore Henry
+action,excited,1hr,english,Upgrade
+action,excited,1hr,english,Equalizer 2
+action,excited,1hr,english,Fast Five
+action,excited,1hr,english,Hobbs and Shaw
+action,excited,1hr,english,Ambulance
+action,excited,1hr,english,The A Team
+
 action,excited,2hr,english,Mad Max Fury Road
 action,excited,2hr,english,Edge of Tomorrow
 action,excited,2hr,english,Casino Royale
 action,excited,2hr,english,The Raid
+action,excited,2hr,english,Mission Impossible Fallout
+action,excited,2hr,english,Skyfall
+action,excited,2hr,english,The Bourne Identity
+action,excited,2hr,english,The Gray Man
+action,excited,2hr,english,6 Underground
+action,excited,2hr,english,The Dark Knight Rises
+action,excited,2hr,english,Captain America Winter Soldier
+action,excited,2hr,english,Pacific Rim
+action,excited,2hr,english,Alita Battle Angel
+action,excited,2hr,english,Ready Player One
+action,excited,2hr,english,Terminator 2
+action,excited,2hr,english,Die Hard
+action,excited,2hr,english,Lethal Weapon
+action,excited,2hr,english,The Rock
+action,excited,2hr,english,Speed
+action,excited,2hr,english,Face Off
+
 action,excited,3hr,english,Avengers Endgame
 action,excited,3hr,english,The Batman
 action,excited,3hr,english,Gladiator
 action,excited,3hr,english,Justice League Snyder Cut
-
-action,happy,1hr,english,The Mummy
-action,happy,1hr,english,Free Guy
-action,happy,1hr,english,Rush Hour
-action,happy,2hr,english,Top Gun Maverick
-action,happy,2hr,english,Guardians of the Galaxy
-action,happy,2hr,english,Spider Man Homecoming
-action,happy,3hr,english,Avatar
-action,happy,3hr,english,Thor Ragnarok
-action,happy,3hr,english,RRR
-
-action,sad,1hr,english,Logan
-action,sad,1hr,english,The Equalizer
-action,sad,1hr,english,Taken
-action,sad,2hr,english,The Dark Knight
-action,sad,2hr,english,Joker
-action,sad,2hr,english,Man on Fire
-action,sad,3hr,english,Gladiator
-action,sad,3hr,english,Braveheart
-action,sad,3hr,english,Troy
-
-comedy,excited,1hr,english,Game Night
-comedy,excited,1hr,english,Tag
-comedy,excited,2hr,english,Deadpool
-comedy,excited,2hr,english,The Nice Guys
-comedy,excited,3hr,english,Scott Pilgrim vs The World
-comedy,excited,3hr,english,Free Guy
+action,excited,3hr,english,Avatar The Way of Water
+action,excited,3hr,english,Dune Part Two
+action,excited,3hr,english,Kingdom of Heaven
+action,excited,3hr,english,Troy
+action,excited,3hr,english,300
+action,excited,3hr,english,The Lord of the Rings The Return of the King
+action,excited,3hr,english,The Hobbit Battle of the Five Armies
+action,excited,3hr,english,Ben Hur
+action,excited,3hr,english,Braveheart
+action,excited,3hr,english,The Last Samurai
+action,excited,3hr,english,Pearl Harbor
+action,excited,3hr,english,The Revenant
+action,excited,3hr,english,The Patriot
+action,excited,3hr,english,Apocalypto
+action,excited,3hr,english,The Northman
+action,excited,3hr,english,Watchmen
 
 comedy,happy,1hr,english,The Mask
 comedy,happy,1hr,english,Yes Man
 comedy,happy,1hr,english,Central Intelligence
+comedy,happy,1hr,english,Johnny English
+comedy,happy,1hr,english,Bean
+comedy,happy,1hr,english,Liar Liar
+comedy,happy,1hr,english,Paul
+comedy,happy,1hr,english,The Internship
+comedy,happy,1hr,english,White Chicks
+comedy,happy,1hr,english,Mean Girls
+comedy,happy,1hr,english,The Dictator
+comedy,happy,1hr,english,EuroTrip
+comedy,happy,1hr,english,Little Man
+comedy,happy,1hr,english,Ride Along
+comedy,happy,1hr,english,School of Rock
+comedy,happy,1hr,english,Night at the Museum
+comedy,happy,1hr,english,Click
+comedy,happy,1hr,english,Big Daddy
+comedy,happy,1hr,english,Grown Ups
+comedy,happy,1hr,english,The Game Plan
+
 comedy,happy,2hr,english,Superbad
 comedy,happy,2hr,english,The Hangover
 comedy,happy,2hr,english,21 Jump Street
-comedy,happy,3hr,english,The Grand Budapest Hotel
-comedy,happy,3hr,english,Free Guy
-
-comedy,sad,1hr,english,Mr Bean Movie
-comedy,sad,1hr,english,Paddington
-comedy,sad,1hr,english,Paul Blart Mall Cop
-comedy,sad,2hr,english,Paddington 2
-comedy,sad,2hr,english,Chef
-comedy,sad,2hr,english,Instant Family
-comedy,sad,3hr,english,The Secret Life of Walter Mitty
-comedy,sad,3hr,english,Green Book
-
-romance,excited,1hr,english,Friends with Benefits
-romance,excited,1hr,english,The Holiday
-romance,excited,2hr,english,Crazy Stupid Love
-romance,excited,2hr,english,Notting Hill
-romance,excited,3hr,english,Pride and Prejudice
-romance,excited,3hr,english,A Star Is Born
+comedy,happy,2hr,english,We're the Millers
+comedy,happy,2hr,english,The Heat
+comedy,happy,2hr,english,Step Brothers
+comedy,happy,2hr,english,Hot Fuzz
+comedy,happy,2hr,english,Booksmart
+comedy,happy,2hr,english,Bridesmaids
+comedy,happy,2hr,english,Ted
+comedy,happy,2hr,english,Neighbors
+comedy,happy,2hr,english,Due Date
+comedy,happy,2hr,english,Date Night
+comedy,happy,2hr,english,Game Night
+comedy,happy,2hr,english,Tag
+comedy,happy,2hr,english,Deadpool
+comedy,happy,2hr,english,Free Guy
+comedy,happy,2hr,english,The Nice Guys
+comedy,happy,2hr,english,Chef
+comedy,happy,2hr,english,Instant Family
 
 romance,happy,1hr,english,Crazy Rich Asians
 romance,happy,1hr,english,Love Actually
 romance,happy,1hr,english,About Time
-romance,happy,2hr,english,Titanic
-romance,happy,2hr,english,The Proposal
-romance,happy,2hr,english,Pretty Woman
-romance,happy,3hr,english,La La Land
-romance,happy,3hr,english,The Notebook
+romance,happy,1hr,english,The Holiday
+romance,happy,1hr,english,Friends with Benefits
+romance,happy,1hr,english,13 Going on 30
+romance,happy,1hr,english,Letters to Juliet
+romance,happy,1hr,english,The Vow
+romance,happy,1hr,english,27 Dresses
+romance,happy,1hr,english,Set It Up
+romance,happy,1hr,english,Love Rosie
+romance,happy,1hr,english,The Wedding Planner
+romance,happy,1hr,english,No Strings Attached
+romance,happy,1hr,english,How to Lose a Guy in 10 Days
+romance,happy,1hr,english,Leap Year
+romance,happy,1hr,english,Easy A
+romance,happy,1hr,english,Definitely Maybe
+romance,happy,1hr,english,Serendipity
+romance,happy,1hr,english,Music and Lyrics
+romance,happy,1hr,english,The Proposal
 
-romance,sad,1hr,english,Blue Valentine
-romance,sad,1hr,english,One Day
-romance,sad,1hr,english,Five Feet Apart
-romance,sad,2hr,english,The Notebook
-romance,sad,2hr,english,Atonement
-romance,sad,2hr,english,Dear John
-romance,sad,3hr,english,Me Before You
-romance,sad,3hr,english,The Fault in Our Stars
+romance,happy,2hr,english,Titanic
+romance,happy,2hr,english,Pretty Woman
+romance,happy,2hr,english,Notting Hill
+romance,happy,2hr,english,Crazy Stupid Love
+romance,happy,2hr,english,The Notebook
+romance,happy,2hr,english,Before Sunrise
+romance,happy,2hr,english,The Fault in Our Stars
+romance,happy,2hr,english,Me Before You
+romance,happy,2hr,english,Atonement
+romance,happy,2hr,english,Dear John
+romance,happy,2hr,english,One Day
+romance,happy,2hr,english,The Lucky One
+romance,happy,2hr,english,Safe Haven
+romance,happy,2hr,english,If I Stay
+romance,happy,2hr,english,Remember Me
+romance,happy,2hr,english,The Choice
+romance,happy,2hr,english,After
+romance,happy,2hr,english,Before We Go
+romance,happy,2hr,english,Endless Love
+romance,happy,2hr,english,Midnight Sun
 
 thriller,excited,1hr,english,Run
 thriller,excited,1hr,english,Searching
 thriller,excited,1hr,english,Phone Booth
+thriller,excited,1hr,english,The Guilty
+thriller,excited,1hr,english,Disturbia
+thriller,excited,1hr,english,Source Code
+thriller,excited,1hr,english,Flightplan
+thriller,excited,1hr,english,Red Eye
+thriller,excited,1hr,english,Fracture
+thriller,excited,1hr,english,The Call
+thriller,excited,1hr,english,Unknown
+thriller,excited,1hr,english,Enemy
+thriller,excited,1hr,english,The Gift
+thriller,excited,1hr,english,Hush
+thriller,excited,1hr,english,Gerald's Game
+thriller,excited,1hr,english,Run All Night
+thriller,excited,1hr,english,Non Stop
+thriller,excited,1hr,english,The Commuter
+thriller,excited,1hr,english,Prisoners
+thriller,excited,1hr,english,Split
+
 thriller,excited,2hr,english,A Quiet Place
 thriller,excited,2hr,english,Gone Girl
-thriller,excited,2hr,english,Prisoners
-thriller,excited,3hr,english,Inception
-thriller,excited,3hr,english,Interstellar
+thriller,excited,2hr,english,Se7en
+thriller,excited,2hr,english,Zodiac
+thriller,excited,2hr,english,Shutter Island
+thriller,excited,2hr,english,The Game
+thriller,excited,2hr,english,Get Out
+thriller,excited,2hr,english,The Girl with the Dragon Tattoo
+thriller,excited,2hr,english,The Silence of the Lambs
+thriller,excited,2hr,english,Black Swan
+thriller,excited,2hr,english,Nightcrawler
+thriller,excited,2hr,english,The Machinist
+thriller,excited,2hr,english,Nocturnal Animals
+thriller,excited,2hr,english,Identity
+thriller,excited,2hr,english,Secret Window
+thriller,excited,2hr,english,The Sixth Sense
+thriller,excited,2hr,english,Primal Fear
+thriller,excited,2hr,english,The Others
+thriller,excited,2hr,english,Insomnia
+thriller,excited,2hr,english,The Bone Collector
 
-thriller,happy,1hr,english,Knives Out
-thriller,happy,1hr,english,Now You See Me
-thriller,happy,2hr,english,The Menu
-thriller,happy,2hr,english,Baby Driver
-thriller,happy,3hr,english,Tenet
-thriller,happy,3hr,english,The Wolf of Wall Street
-
-thriller,sad,1hr,english,The Guilty
-thriller,sad,1hr,english,Shutter Island
-thriller,sad,2hr,english,Se7en
-thriller,sad,2hr,english,Zodiac
-thriller,sad,3hr,english,Oppenheimer
-thriller,sad,3hr,english,The Prestige
 
 action,excited,1hr,hindi,Dhoom
 action,excited,1hr,hindi,Baaghi
 action,excited,1hr,hindi,Commando
+action,excited,1hr,hindi,Force
+action,excited,1hr,hindi,Satyameva Jayate
+action,excited,1hr,hindi,Attack
+action,excited,1hr,hindi,Baby
+action,excited,1hr,hindi,Khiladi 786
+action,excited,1hr,hindi,Players
+action,excited,1hr,hindi,Race 2
+action,excited,1hr,hindi,Dishoom
+action,excited,1hr,hindi,Rocky Handsome
+action,excited,1hr,hindi,Naam Shabana
+action,excited,1hr,hindi,Holiday
+action,excited,1hr,hindi,Tejas
+action,excited,1hr,hindi,Heropanti
+action,excited,1hr,hindi,Sooryavanshi
+action,excited,1hr,hindi,Main Tera Hero
+action,excited,1hr,hindi,Agent Vinod
+action,excited,1hr,hindi,Ra One
+
 action,excited,2hr,hindi,Pathaan
 action,excited,2hr,hindi,War
 action,excited,2hr,hindi,Bang Bang
+action,excited,2hr,hindi,Tiger Zinda Hai
+action,excited,2hr,hindi,Don
+action,excited,2hr,hindi,Krrish
+action,excited,2hr,hindi,Raees
+action,excited,2hr,hindi,Singham Returns
+action,excited,2hr,hindi,Ek Tha Tiger
+action,excited,2hr,hindi,Bell Bottom
+action,excited,2hr,hindi,Shivaay
+action,excited,2hr,hindi,Uri The Surgical Strike
+action,excited,2hr,hindi,Animal
+action,excited,2hr,hindi,Kill
+action,excited,2hr,hindi,Vikram Vedha
+action,excited,2hr,hindi,Bholaa
+action,excited,2hr,hindi,Thugs of Hindostan
+action,excited,2hr,hindi,Saaho
+action,excited,2hr,hindi,Khuda Haafiz
+action,excited,2hr,hindi,Yodha
+
 action,excited,3hr,hindi,Jawan
-action,excited,3hr,hindi,Animal
 action,excited,3hr,hindi,Shershaah
-
-action,happy,1hr,hindi,Singham
-action,happy,1hr,hindi,Chennai Express
-action,happy,2hr,hindi,Don
-action,happy,2hr,hindi,Krrish
-action,happy,3hr,hindi,Bajrangi Bhaijaan
-action,happy,3hr,hindi,RRR
-
-action,sad,1hr,hindi,Ghajini
-action,sad,1hr,hindi,Holiday
-action,sad,2hr,hindi,Kesari
-action,sad,2hr,hindi,Raazi
-action,sad,3hr,hindi,Border
-action,sad,3hr,hindi,Lagaan
-
-comedy,excited,1hr,hindi,Fukrey
-comedy,excited,1hr,hindi,Housefull
-comedy,excited,2hr,hindi,Good Newwz
-comedy,excited,2hr,hindi,Dream Girl
-comedy,excited,3hr,hindi,Munna Bhai MBBS
-comedy,excited,3hr,hindi,PK
+action,excited,3hr,hindi,RRR
+action,excited,3hr,hindi,Bajrangi Bhaijaan
+action,excited,3hr,hindi,Dangal
+action,excited,3hr,hindi,Lagaan
+action,excited,3hr,hindi,Border
+action,excited,3hr,hindi,Padmaavat
+action,excited,3hr,hindi,Tanhaji
+action,excited,3hr,hindi,Brahmastra
+action,excited,3hr,hindi,Kesari
+action,excited,3hr,hindi,Sam Bahadur
+action,excited,3hr,hindi,Gadar 2
+action,excited,3hr,hindi,Rocky Aur Rani Kii Prem Kahaani
+action,excited,3hr,hindi,Kalank
+action,excited,3hr,hindi,Panipat
+action,excited,3hr,hindi,Mohenjo Daro
+action,excited,3hr,hindi,Jodhaa Akbar
+action,excited,3hr,hindi,Baahubali The Beginning
+action,excited,3hr,hindi,Baahubali 2
 
 comedy,happy,1hr,hindi,Andaaz Apna Apna
 comedy,happy,1hr,hindi,Welcome
 comedy,happy,1hr,hindi,Bhool Bhulaiyaa
+comedy,happy,1hr,hindi,Housefull
+comedy,happy,1hr,hindi,Fukrey
+comedy,happy,1hr,hindi,Dhamaal
+comedy,happy,1hr,hindi,Golmaal
+comedy,happy,1hr,hindi,Chup Chup Ke
+comedy,happy,1hr,hindi,Hungama
+comedy,happy,1hr,hindi,No Entry
+comedy,happy,1hr,hindi,De Dana Dan
+comedy,happy,1hr,hindi,Ready
+comedy,happy,1hr,hindi,Partner
+comedy,happy,1hr,hindi,Mujhse Shaadi Karogi
+comedy,happy,1hr,hindi,Total Dhamaal
+comedy,happy,1hr,hindi,Double Dhamaal
+comedy,happy,1hr,hindi,All the Best
+comedy,happy,1hr,hindi,Khatta Meetha
+comedy,happy,1hr,hindi,Main Hoon Na
+comedy,happy,1hr,hindi,Tees Maar Khan
+
 comedy,happy,2hr,hindi,3 Idiots
 comedy,happy,2hr,hindi,Hera Pheri
 comedy,happy,2hr,hindi,Delhi Belly
-comedy,happy,3hr,hindi,Chhichhore
-comedy,happy,3hr,hindi,PK
-
-comedy,sad,1hr,hindi,Do Dooni Chaar
-comedy,sad,1hr,hindi,Peepli Live
-comedy,sad,2hr,hindi,Karwaan
-comedy,sad,2hr,hindi,Hindi Medium
-comedy,sad,3hr,hindi,Dear Zindagi
-comedy,sad,3hr,hindi,October
-
-romance,excited,1hr,hindi,Love Aaj Kal
-romance,excited,1hr,hindi,Hasee Toh Phasee
-romance,excited,2hr,hindi,Kal Ho Naa Ho
-romance,excited,2hr,hindi,Veer Zaara
-romance,excited,3hr,hindi,Yeh Jawaani Hai Deewani
-romance,excited,3hr,hindi,Rockstar
+comedy,happy,2hr,hindi,Good Newwz
+comedy,happy,2hr,hindi,Dream Girl
+comedy,happy,2hr,hindi,Chhichhore
+comedy,happy,2hr,hindi,PK
+comedy,happy,2hr,hindi,Badhaai Ho
+comedy,happy,2hr,hindi,Stree
+comedy,happy,2hr,hindi,Luka Chuppi
+comedy,happy,2hr,hindi,JugJugg Jeeyo
+comedy,happy,2hr,hindi,Pati Patni Aur Woh
+comedy,happy,2hr,hindi,Bareilly Ki Barfi
+comedy,happy,2hr,hindi,Mimi
+comedy,happy,2hr,hindi,Karwaan
+comedy,happy,2hr,hindi,Hindi Medium
+comedy,happy,2hr,hindi,Doctor G
+comedy,happy,2hr,hindi,Bala
+comedy,happy,2hr,hindi,Dream Girl 2
+comedy,happy,2hr,hindi,Crew
 
 romance,happy,1hr,hindi,Hum Tum
 romance,happy,1hr,hindi,Barfi
 romance,happy,1hr,hindi,Ajab Prem Ki Ghazab Kahani
+romance,happy,1hr,hindi,Hasee Toh Phasee
+romance,happy,1hr,hindi,Love Aaj Kal
+romance,happy,1hr,hindi,OK Jaanu
+romance,happy,1hr,hindi,Shuddh Desi Romance
+romance,happy,1hr,hindi,Half Girlfriend
+romance,happy,1hr,hindi,I Hate Luv Storys
+romance,happy,1hr,hindi,Befikre
+romance,happy,1hr,hindi,Khoobsurat
+romance,happy,1hr,hindi,Ek Villain
+romance,happy,1hr,hindi,Student of the Year
+romance,happy,1hr,hindi,2 States
+romance,happy,1hr,hindi,Rockstar
+romance,happy,1hr,hindi,Aashiqui 2
+romance,happy,1hr,hindi,Sanam Teri Kasam
+romance,happy,1hr,hindi,Fitoor
+romance,happy,1hr,hindi,Qarib Qarib Singlle
+romance,happy,1hr,hindi,Tamasha
+
 romance,happy,2hr,hindi,Jab We Met
 romance,happy,2hr,hindi,Dilwale Dulhania Le Jayenge
 romance,happy,2hr,hindi,Veer Zaara
-romance,happy,3hr,hindi,Yeh Jawaani Hai Deewani
-romance,happy,3hr,hindi,Rocky Aur Rani Kii Prem Kahaani
-
-romance,sad,1hr,hindi,Laila Majnu
-romance,sad,1hr,hindi,Aashiqui 2
-romance,sad,2hr,hindi,Raanjhanaa
-romance,sad,2hr,hindi,Tamasha
-romance,sad,3hr,hindi,Devdas
-romance,sad,3hr,hindi,Rockstar
+romance,happy,2hr,hindi,Yeh Jawaani Hai Deewani
+romance,happy,2hr,hindi,Kal Ho Naa Ho
+romance,happy,2hr,hindi,Rehnaa Hai Terre Dil Mein
+romance,happy,2hr,hindi,Wake Up Sid
+romance,happy,2hr,hindi,Raanjhanaa
+romance,happy,2hr,hindi,Dear Zindagi
+romance,happy,2hr,hindi,October
+romance,happy,2hr,hindi,Love Per Square Foot
+romance,happy,2hr,hindi,Tu Jhoothi Main Makkaar
+romance,happy,2hr,hindi,Sita Ramam
+romance,happy,2hr,hindi,Qala
+romance,happy,2hr,hindi,Lootera
+romance,happy,2hr,hindi,Kabir Singh
+romance,happy,2hr,hindi,Highway
+romance,happy,2hr,hindi,Ae Dil Hai Mushkil
+romance,happy,2hr,hindi,Rocky Aur Rani Kii Prem Kahaani
+romance,happy,2hr,hindi,Hum Dil De Chuke Sanam
 
 thriller,excited,1hr,hindi,Kahaani
 thriller,excited,1hr,hindi,Badla
 thriller,excited,1hr,hindi,Drishyam 2
+thriller,excited,1hr,hindi,Johnny Gaddaar
+thriller,excited,1hr,hindi,Ugly
+thriller,excited,1hr,hindi,Kaun
+thriller,excited,1hr,hindi,Raman Raghav 2.0
+thriller,excited,1hr,hindi,No Smoking
+thriller,excited,1hr,hindi,Table No 21
+thriller,excited,1hr,hindi,404 Error Not Found
+thriller,excited,1hr,hindi,Ek Hasina Thi
+thriller,excited,1hr,hindi,Game
+thriller,excited,1hr,hindi,Te3n
+thriller,excited,1hr,hindi,Blurr
+thriller,excited,1hr,hindi,Freddy
+thriller,excited,1hr,hindi,C U Soon
+thriller,excited,1hr,hindi,Chor Nikal Ke Bhaga
+thriller,excited,1hr,hindi,A Thursday
+thriller,excited,1hr,hindi,Merry Christmas
+thriller,excited,1hr,hindi,Gaslight
+
 thriller,excited,2hr,hindi,Talaash
 thriller,excited,2hr,hindi,Special 26
 thriller,excited,2hr,hindi,Andhadhun
-thriller,excited,3hr,hindi,Talvar
-thriller,excited,3hr,hindi,A Wednesday
+thriller,excited,2hr,hindi,Ittefaq
+thriller,excited,2hr,hindi,Race
+thriller,excited,2hr,hindi,Don 2
+thriller,excited,2hr,hindi,Dhoom 2
+thriller,excited,2hr,hindi,Black Friday
+thriller,excited,2hr,hindi,Gangs of Wasseypur
+thriller,excited,2hr,hindi,Raazi
+thriller,excited,2hr,hindi,Talvar
+thriller,excited,2hr,hindi,A Wednesday
+thriller,excited,2hr,hindi,Shanghai
+thriller,excited,2hr,hindi,Mardaani
+thriller,excited,2hr,hindi,NH10
+thriller,excited,2hr,hindi,Article 15
+thriller,excited,2hr,hindi,Section 375
+thriller,excited,2hr,hindi,Pink
+thriller,excited,2hr,hindi,Runway 34
+thriller,excited,2hr,hindi,Mission Majnu
 
-thriller,happy,1hr,hindi,Monica O My Darling
-thriller,happy,1hr,hindi,Johnny Gaddaar
-thriller,happy,2hr,hindi,Ittefaq
-thriller,happy,2hr,hindi,Race
-thriller,happy,3hr,hindi,Don 2
-thriller,happy,3hr,hindi,Dhoom 2
-
-thriller,sad,1hr,hindi,Ugly
-thriller,sad,1hr,hindi,Raman Raghav 2.0
-thriller,sad,2hr,hindi,No Smoking
-thriller,sad,2hr,hindi,Kaun
-thriller,sad,3hr,hindi,Black Friday
-thriller,sad,3hr,hindi,Gangs of Wasseypur
+genre,mood,time,language,recommendation
 
 action,excited,1hr,malayalam,Thallumaala
 action,excited,1hr,malayalam,RDX
 action,excited,1hr,malayalam,Aadu
+action,excited,1hr,malayalam,Ajagajantharam
+action,excited,1hr,malayalam,Chaver
+action,excited,1hr,malayalam,Pokkiri Raja
+action,excited,1hr,malayalam,Theerppu
+action,excited,1hr,malayalam,Mikhael
+action,excited,1hr,malayalam,Anwar
+action,excited,1hr,malayalam,Kaapa
+
 action,excited,2hr,malayalam,Minnal Murali
 action,excited,2hr,malayalam,Turbo
 action,excited,2hr,malayalam,Kurup
+action,excited,2hr,malayalam,Kannur Squad
+action,excited,2hr,malayalam,Abrahaminte Santhathikal
+action,excited,2hr,malayalam,Porinju Mariam Jose
+action,excited,2hr,malayalam,Driving Licence
+action,excited,2hr,malayalam,Masterpiece
+action,excited,2hr,malayalam,Anjaam Pathiraa
+action,excited,2hr,malayalam,Marco
+
 action,excited,3hr,malayalam,Lucifer
 action,excited,3hr,malayalam,Bheeshma Parvam
+action,excited,3hr,malayalam,Marakkar
+action,excited,3hr,malayalam,Malaikottai Vaaliban
+action,excited,3hr,malayalam,Mamangam
+action,excited,3hr,malayalam,King of Kotha
+action,excited,3hr,malayalam,Odiyan
+action,excited,3hr,malayalam,Malik
+action,excited,3hr,malayalam,Iyyobinte Pusthakam
+action,excited,3hr,malayalam,Kuruthi
 
 action,happy,1hr,malayalam,Driving Licence
 action,happy,1hr,malayalam,Ayyappanum Koshiyum
+action,happy,1hr,malayalam,Godha
+action,happy,1hr,malayalam,Vellimoonga
+action,happy,1hr,malayalam,Jacobinte Swargarajyam
+action,happy,1hr,malayalam,Neram
+action,happy,1hr,malayalam,Kunjiramayanam
+action,happy,1hr,malayalam,Adi Kapyare Kootamani
+action,happy,1hr,malayalam,Thanneer Mathan Dinangal
+action,happy,1hr,malayalam,Premalu
+
 action,happy,2hr,malayalam,King of Kotha
 action,happy,2hr,malayalam,Kannur Squad
+action,happy,2hr,malayalam,Romancham
+action,happy,2hr,malayalam,Minnal Murali
+action,happy,2hr,malayalam,Charlie
+action,happy,2hr,malayalam,Take Off
+action,happy,2hr,malayalam,Android Kunjappan
+action,happy,2hr,malayalam,2018
+action,happy,2hr,malayalam,Ustad Hotel
+action,happy,2hr,malayalam,Home
+
 action,happy,3hr,malayalam,Marakkar
 action,happy,3hr,malayalam,Malaikottai Vaaliban
+action,happy,3hr,malayalam,Bangalore Days
+action,happy,3hr,malayalam,Lucifer
+action,happy,3hr,malayalam,Premam
+action,happy,3hr,malayalam,Hridayam
+action,happy,3hr,malayalam,Uyare
+action,happy,3hr,malayalam,Jacobinte Swargarajyam
+action,happy,3hr,malayalam,Koode
+action,happy,3hr,malayalam,Varane Avashyamund
 
 action,sad,1hr,malayalam,Kammatipaadam
 action,sad,1hr,malayalam,Unda
+action,sad,1hr,malayalam,Joseph
+action,sad,1hr,malayalam,Nayattu
+action,sad,1hr,malayalam,Kaattu
+action,sad,1hr,malayalam,Pada
+action,sad,1hr,malayalam,Operation Java
+action,sad,1hr,malayalam,Forensic
+action,sad,1hr,malayalam,Anjaam Pathiraa
+action,sad,1hr,malayalam,Memories
+
 action,sad,2hr,malayalam,Malik
 action,sad,2hr,malayalam,Joseph
+action,sad,2hr,malayalam,Drishyam
+action,sad,2hr,malayalam,Ela Veezha Poonchira
+action,sad,2hr,malayalam,Kuruthi
+action,sad,2hr,malayalam,Appan
+action,sad,2hr,malayalam,Cold Case
+action,sad,2hr,malayalam,Salute
+action,sad,2hr,malayalam,CBI 5
+action,sad,2hr,malayalam,Christopher
+
 action,sad,3hr,malayalam,Iyyobinte Pusthakam
 action,sad,3hr,malayalam,Odiyan
+action,sad,3hr,malayalam,Lucifer
+action,sad,3hr,malayalam,Malik
+action,sad,3hr,malayalam,2018
+action,sad,3hr,malayalam,Uyare
+action,sad,3hr,malayalam,Take Off
+action,sad,3hr,malayalam,Kaathal
+action,sad,3hr,malayalam,Aarkkariyam
+action,sad,3hr,malayalam,Saudi Vellakka
 
 comedy,excited,1hr,malayalam,Adi Kapyare Kootamani
 comedy,excited,1hr,malayalam,Two Countries
+comedy,excited,1hr,malayalam,Premalu
+comedy,excited,1hr,malayalam,Neram
+comedy,excited,1hr,malayalam,Happy Wedding
+comedy,excited,1hr,malayalam,Alamara
+comedy,excited,1hr,malayalam,Oru Vadakkan Selfie
+comedy,excited,1hr,malayalam,Chunks
+comedy,excited,1hr,malayalam,June
+comedy,excited,1hr,malayalam,Mandharam
+
 comedy,excited,2hr,malayalam,Romancham
 comedy,excited,2hr,malayalam,Jan E Man
+comedy,excited,2hr,malayalam,Godha
+comedy,excited,2hr,malayalam,Kunjiramayanam
+comedy,excited,2hr,malayalam,Vellimoonga
+comedy,excited,2hr,malayalam,Thinkalazhcha Nishchayam
+comedy,excited,2hr,malayalam,Jaya Jaya Jaya Jaya Hey
+comedy,excited,2hr,malayalam,Nna Thaan Case Kodu
+comedy,excited,2hr,malayalam,Padayottam
+comedy,excited,2hr,malayalam,Adi
+
 comedy,excited,3hr,malayalam,Churuli
 comedy,excited,3hr,malayalam,Double Barrel
-
-comedy,happy,1hr,malayalam,Premalu
-comedy,happy,1hr,malayalam,Godha
-comedy,happy,1hr,malayalam,Jaya Jaya Jaya Jaya Hey
-comedy,happy,2hr,malayalam,Om Shanti Oshana
-comedy,happy,2hr,malayalam,Kunjiramayanam
-comedy,happy,2hr,malayalam,Vellimoonga
-comedy,happy,3hr,malayalam,Romancham
-comedy,happy,3hr,malayalam,Jan E Man
-
-comedy,sad,1hr,malayalam,Thinkalazhcha Nishchayam
-comedy,sad,1hr,malayalam,Njan Prakashan
-comedy,sad,2hr,malayalam,Android Kunjappan
-comedy,sad,2hr,malayalam,Kanakam Kaamini Kalaham
-comedy,sad,3hr,malayalam,Home
-comedy,sad,3hr,malayalam,Saudi Vellakka
-
-romance,excited,1hr,malayalam,June
-romance,excited,1hr,malayalam,Thanneer Mathan Dinangal
-romance,excited,2hr,malayalam,Hridayam
-romance,excited,2hr,malayalam,Premam
-romance,excited,3hr,malayalam,Bangalore Days
-romance,excited,3hr,malayalam,Jacobinte Swargarajyam
+comedy,excited,3hr,malayalam,Bangalore Days
+comedy,excited,3hr,malayalam,Premam
+comedy,excited,3hr,malayalam,Hridayam
+comedy,excited,3hr,malayalam,Varane Avashyamund
+comedy,excited,3hr,malayalam,Bro Daddy
+comedy,excited,3hr,malayalam,Home
+comedy,excited,3hr,malayalam,Ustad Hotel
+comedy,excited,3hr,malayalam,Jacobinte Swargarajyam
 
 romance,happy,1hr,malayalam,June
 romance,happy,1hr,malayalam,Thattathin Marayathu
+romance,happy,1hr,malayalam,Premalu
+romance,happy,1hr,malayalam,Mandharam
 romance,happy,1hr,malayalam,Ohm Shanthi Oshaana
+romance,happy,1hr,malayalam,Anarkali
+romance,happy,1hr,malayalam,Sunday Holiday
+romance,happy,1hr,malayalam,Love Action Drama
+romance,happy,1hr,malayalam,Charlie
+romance,happy,1hr,malayalam,100 Days of Love
+
 romance,happy,2hr,malayalam,Hridayam
-romance,happy,2hr,malayalam,Anuraga Karikkin Vellam
 romance,happy,2hr,malayalam,Premam
-romance,happy,3hr,malayalam,Bangalore Days
-romance,happy,3hr,malayalam,Jacobinte Swargarajyam
+romance,happy,2hr,malayalam,Anuraga Karikkin Vellam
+romance,happy,2hr,malayalam,Ustad Hotel
+romance,happy,2hr,malayalam,Koode
+romance,happy,2hr,malayalam,Bangalore Days
+romance,happy,2hr,malayalam,Jacobinte Swargarajyam
+romance,happy,2hr,malayalam,Varane Avashyamund
+romance,happy,2hr,malayalam,Ennum Eppozhum
+romance,happy,2hr,malayalam,Njan Prakashan
 
 romance,sad,1hr,malayalam,Mayaanadhi
 romance,sad,1hr,malayalam,Annayum Rasoolum
+romance,sad,1hr,malayalam,Neelakasham Pachakadal Chuvanna Bhoomi
+romance,sad,1hr,malayalam,Hey Jude
+romance,sad,1hr,malayalam,Dear Friend
+romance,sad,1hr,malayalam,North 24 Kaatham
+romance,sad,1hr,malayalam,Carbon
+romance,sad,1hr,malayalam,Mili
+romance,sad,1hr,malayalam,Kumbalangi Nights
+romance,sad,1hr,malayalam,Charlie
+
 romance,sad,2hr,malayalam,Ennu Ninte Moideen
 romance,sad,2hr,malayalam,Sufiyum Sujatayum
-romance,sad,3hr,malayalam,Uyare
-romance,sad,3hr,malayalam,Koode
+romance,sad,2hr,malayalam,Uyare
+romance,sad,2hr,malayalam,Koode
+romance,sad,2hr,malayalam,Kaathal
+romance,sad,2hr,malayalam,Aarkkariyam
+romance,sad,2hr,malayalam,The Great Indian Kitchen
+romance,sad,2hr,malayalam,Take Off
+romance,sad,2hr,malayalam,Virus
+romance,sad,2hr,malayalam,Home
 
 thriller,excited,1hr,malayalam,Memories
 thriller,excited,1hr,malayalam,Nayattu
 thriller,excited,1hr,malayalam,Mumbai Police
-thriller,excited,2hr,malayalam,Drishyam
-thriller,excited,2hr,malayalam,Anjaam
+thriller,excited,1hr,malayalam,Forensic
+thriller,excited,1hr,malayalam,Operation Java
+thriller,excited,1hr,malayalam,Cold Case
+thriller,excited,1hr,malayalam,Ela Veezha Poonchira
+thriller,excited,1hr,malayalam,Salute
+thriller,excited,1hr,malayalam,Rorschach
+thriller,excited,1hr,malayalam,Iratta
 
+thriller,excited,2hr,malayalam,Drishyam
+thriller,excited,2hr,malayalam,Anjaam Pathiraa
+thriller,excited,2hr,malayalam,Joseph
+thriller,excited,2hr,malayalam,Kuruthi
+thriller,excited,2hr,malayalam,Appan
+thriller,excited,2hr,malayalam,Night Drive
+thriller,excited,2hr,malayalam,Kooman
+thriller,excited,2hr,malayalam,Chaaver
+thriller,excited,2hr,malayalam,Corona Papers
+thriller,excited,2hr,malayalam,Garudan
+
+thriller,excited,3hr,malayalam,Lucifer
+thriller,excited,3hr,malayalam,Malik
+thriller,excited,3hr,malayalam,Bheeshma Parvam
+thriller,excited,3hr,malayalam,2018
+thriller,excited,3hr,malayalam,Kurup
+thriller,excited,3hr,malayalam,Christopher
+thriller,excited,3hr,malayalam,King of Kotha
+thriller,excited,3hr,malayalam,Marco
+thriller,excited,3hr,malayalam,Odiyan
+thriller,excited,3hr,malayalam,CBI 5
