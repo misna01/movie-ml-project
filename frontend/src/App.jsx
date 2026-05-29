@@ -37,6 +37,9 @@ function App() {
   const [error, setError] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
 
+  const [seenMovies, setSeenMovies] = useState([]);
+  const [lastQuery, setLastQuery] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -44,16 +47,37 @@ function App() {
     setMovies([]);
     setHasSearched(true);
 
+    const currentQuery = `${genre}_${mood}_${time}_${language}`;
+    let currentExclude = [];
+
+    if (lastQuery === currentQuery) {
+      currentExclude = [...seenMovies];
+    } else {
+      // Clear history when user switches to a different search criteria
+      setSeenMovies([]);
+      currentExclude = [];
+    }
+
     try {
       const res = await axios.post(`${API_BASE_URL}/predict`, {
         genre,
         mood,
         time,
-        language
+        language,
+        exclude: currentExclude
       });
 
       if (res.data.success && res.data.movies) {
-        setMovies(res.data.movies);
+        const returnedMovies = res.data.movies;
+        setMovies(returnedMovies);
+        
+        // Save recommended titles in the session tracker
+        const newlySeenTitles = returnedMovies.map(m => m.title);
+        setSeenMovies(prev => {
+          const combined = [...prev, ...newlySeenTitles];
+          return Array.from(new Set(combined));
+        });
+        setLastQuery(currentQuery);
       } else {
         setError("Invalid response format from server.");
       }
@@ -164,7 +188,6 @@ function App() {
                   <option value="comedy">Comedy</option>
                   <option value="romance">Romance</option>
                   <option value="thriller">Thriller</option>
-                  <option value="drama">Drama</option>
                 </select>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-400">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/></svg>
@@ -287,45 +310,67 @@ function App() {
           )}
 
           {!loading && !error && movies.length > 0 && (
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="show"
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 gap-y-12"
-            >
-              {movies.map((movie, idx) => (
-                <motion.div
-                  key={idx}
-                  variants={itemVariants}
-                  whileHover={{ y: -10 }}
-                  className="group relative cursor-pointer"
-                >
-                  <div className="relative aspect-[2/3] rounded-xl overflow-hidden shadow-2xl bg-zinc-900 transition-all duration-300 group-hover:shadow-red-600/30 ring-1 ring-white/10">
-                    <img 
-                      src={movie.poster} 
-                      alt={movie.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                      onError={(e) => {
-                        e.currentTarget.src = posterFallback(movie.title);
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-300" />
-                    
-                    <div className="absolute inset-x-0 bottom-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center mb-4 opacity-0 group-hover:opacity-100 shadow-lg shadow-red-950/60 transition-opacity duration-300 delay-100">
-                        <PlayCircle className="w-5 h-5 text-white" />
-                      </div>
-                      <h3 className="text-xl font-bold text-white tracking-wide">{movie.title}</h3>
-                      <div className="flex gap-2 items-center mt-2">
-                        <span className="text-xs font-semibold text-red-100 bg-red-600/60 px-2 py-1 rounded border border-red-400/30 capitalize">{genre}</span>
-                        <span className="text-xs font-medium text-zinc-300 capitalize">{language}</span>
+            <div className="space-y-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-zinc-950/45 border border-white/10 px-6 py-4 rounded-xl backdrop-blur-xl mb-4"
+              >
+                <div className="text-center sm:text-left">
+                  <span className="text-xs font-bold text-red-500 uppercase tracking-widest block mb-1">RECOMMENDATION ENGINE</span>
+                  <h2 className="text-xl font-bold text-white capitalize">
+                    {language} • {genre} • {time}
+                  </h2>
+                </div>
+                <div className="flex items-center gap-3 bg-red-950/40 border border-red-500/20 px-4 py-2.5 rounded-lg text-xs font-semibold text-red-200 shadow-inner">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                  </span>
+                  <span>Cycling Active: Click search again to rotate matches!</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="show"
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 gap-y-12"
+              >
+                {movies.map((movie, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={itemVariants}
+                    whileHover={{ y: -10 }}
+                    className="group relative cursor-pointer"
+                  >
+                    <div className="relative aspect-[2/3] rounded-xl overflow-hidden shadow-2xl bg-zinc-900 transition-all duration-300 group-hover:shadow-red-600/30 ring-1 ring-white/10">
+                      <img 
+                        src={movie.poster} 
+                        alt={movie.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = posterFallback(movie.title);
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-300" />
+                      
+                      <div className="absolute inset-x-0 bottom-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center mb-4 opacity-0 group-hover:opacity-100 shadow-lg shadow-red-950/60 transition-opacity duration-300 delay-100">
+                          <PlayCircle className="w-5 h-5 text-white" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white tracking-wide">{movie.title}</h3>
+                        <div className="flex gap-2 items-center mt-2">
+                          <span className="text-xs font-semibold text-red-100 bg-red-600/60 px-2 py-1 rounded border border-red-400/30 capitalize">{genre}</span>
+                          <span className="text-xs font-medium text-zinc-300 capitalize">{language}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
           )}
         </AnimatePresence>
       </div>
